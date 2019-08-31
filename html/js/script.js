@@ -12,6 +12,9 @@ $(function(){
 			case "setTalking":
 				setTalking(event.data.value)
 			break;
+			case "changeVolume":
+				changeVolume(event.data.value)
+			break;
 		}
 	});
 });
@@ -28,7 +31,11 @@ function setJobIcon(icon) {
 
 function setTalking(value) {
 	if (value)
-		$("#voice").html("Stai parlando")
+		$("#voice span").attr("style", "color: green")
 	else
-		$("#voice").html("Voce")
+		$("#voice span").removeAttr("style")
 }//setTalking
+
+function changeVolume(volume) {
+	$("#voice img").attr("src", "./img/speaker" + volume + ".png")
+}//changeVolume

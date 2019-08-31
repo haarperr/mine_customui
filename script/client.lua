@@ -50,6 +50,12 @@ CreateThread(function()
 	end
 end)
 
+--Change volume
+RegisterNetEvent("mine_customui:changeVolume")
+AddEventHandler("mine_customui:changeVolume", function(volume)
+	SendNUIMessage({action = "changeVolume", value = volume})
+end)
+
 --Update state
 RegisterNetEvent("es:activateMoney")
 AddEventHandler("es:activateMoney", function(e)
