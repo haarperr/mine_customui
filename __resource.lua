@@ -29,7 +29,7 @@ files {
 	"./html/js/script.js",
 	-- Img
 	"./html/img/wallet.png",
-	"./html/img/jobs/mechanic.png",
+	"./html/img/jobs/unemployed.png",
 	"./html/img/jobs/police.png",
 	"./html/img/jobs/mechanic.png",
 }
