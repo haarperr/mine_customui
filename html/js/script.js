@@ -1,13 +1,21 @@
 $(function(){
 	window.addEventListener("message", function(event) {
-		if (event.data.action == "setValue") {
-			if (event.data.key == "job")
-				setJobIcon(event.data.icon)
-			setValue(event.data.key, event.data.value)
-		} else if (event.data.action == "setTalking")
-			setTalking(event.data.value)
-		else if (event.data.action == "updateStatus")
-			updateStatus(event.data.status);
+		switch (event.data.action) {
+			case "show":
+				$("#stats").show()
+			break;
+			case "setValue":
+				if (event.data.key == "job")
+					setJobIcon(event.data.icon)
+				setValue(event.data.key, event.data.value)
+			break;
+			case "setTalking":
+				setTalking(event.data.value)
+			break;
+			case "updateStatus":
+				updateStatus(event.data.status);
+			break;
+		}
 	});
 });
 

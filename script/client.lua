@@ -9,6 +9,13 @@ CreateThread(function()
 	ESX.UI.HUD.SetDisplay(0.0)
 end)
 
+--Show GUI
+RegisterNetEvent("mine_custumui:show")
+AddEventHandler("mine_custumui:show", function()
+	SendNUIMessage({action = "show"})
+end)
+
+
 --Starter state
 RegisterNetEvent("esx:playerLoaded")
 AddEventHandler("esx:playerLoaded", function(xPlayer)
