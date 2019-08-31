@@ -7,7 +7,6 @@ CreateThread(function()
 		Citizen.Wait(0)
 	end
 	ESX.UI.HUD.SetDisplay(0.0)
-	TriggerEvent("mine_custumui:show")
 end)
 
 --Show GUI
