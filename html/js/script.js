@@ -25,6 +25,7 @@ function setValue(key, value) {
 }//setValue
 
 function setJobIcon(icon) {
+	if (icon.search("off") != -1) icon = icon.substr(3)
 	$("#job img").attr("src", "./img/jobs/" + icon + ".png")
 }//setJobIcon
 
