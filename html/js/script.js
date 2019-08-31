@@ -17,7 +17,7 @@ function setValue(key, value) {
 }//setValue
 
 function setJobIcon(icon) {
-	$("#job img").attr("src", "img/jobs/" + value + ".png")
+	$("#job img").attr("src", "./img/jobs/" + icon + ".png")
 }//setJobIcon
 
 function setTalking(value) {
