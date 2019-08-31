@@ -27,6 +27,11 @@ files {
 	"./html/js/bootstrap.min.js",
 	"./html/js/bootstrap.min.js.map",
 	"./html/js/script.js",
+	-- Img
+	"./html/img/wallet.png",
+	"./html/img/jobs/mechanic.png",
+	"./html/img/jobs/police.png",
+	"./html/img/jobs/mechanic.png",
 }
 
 dependency "es_extended"
