@@ -28,10 +28,27 @@ files {
 	"./html/js/bootstrap.min.js.map",
 	"./html/js/script.js",
 	-- Img
+	"./html/img/hunger.png",
+	"./html/img/speaker1.png",
+	"./html/img/speaker2.png",
+	"./html/img/speaker3.png",
 	"./html/img/wallet.png",
-	"./html/img/jobs/unemployed.png",
-	"./html/img/jobs/police.png",
+	"./html/img/water.png",
+	"./html/img/jobs/ambulance.png",
+	"./html/img/jobs/ammu.png",
+	"./html/img/jobs/cardealer.png",
+	"./html/img/jobs/fisherman.png",
+	"./html/img/jobs/fueler.png",
+	"./html/img/jobs/gopostal.png",
+	"./html/img/jobs/lumberjack.png",
 	"./html/img/jobs/mechanic.png",
+	"./html/img/jobs/miner.png",
+	"./html/img/jobs/police.png",
+	"./html/img/jobs/reporter.png",
+	"./html/img/jobs/slaughterer.png",
+	"./html/img/jobs/tailor.png",
+	"./html/img/jobs/taxi.png",
+	"./html/img/jobs/unemployed.png"
 }
 
 dependency "es_extended"
