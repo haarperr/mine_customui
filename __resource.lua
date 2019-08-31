@@ -13,4 +13,20 @@ server_script {
 	"script/server.lua"
 }
 
+ui_page "./html/ui.html"
+
+files {
+	"./html/ui.html",
+	-- CSS
+	"./html/css/bootstrap.min.css",
+	"./html/css/bootstrap.min.css.map",
+	"./html/css/style.css",
+	-- JavaScript
+	"./html/js/jquery-3.4.1.min.js",
+	"./html/js/popper.min.js",
+	"./html/js/bootstrap.min.js",
+	"./html/js/bootstrap.min.js.map",
+	"./html/js/script.js",
+}
+
 dependency "es_extended"
