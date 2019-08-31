@@ -12,9 +12,6 @@ $(function(){
 			case "setTalking":
 				setTalking(event.data.value)
 			break;
-			case "updateStatus":
-				updateStatus(event.data.status);
-			break;
 		}
 	});
 });
@@ -35,10 +32,3 @@ function setTalking(value) {
 	else
 		$("#voice").html("Voce")
 }//setTalking
-
-function updateStatus(status) {
-	var hunger = status[0]
-	var thirst = status[1]
-	$("#hunger").html(hunger.percent + "%")
-	$("#water").html(thirst.percent + "%")
-}//updateStatus
