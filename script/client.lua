@@ -17,7 +17,7 @@ AddEventHandler("esx:playerLoaded", function(xPlayer)
 	
 	--Job
 	local job = xPlayer.job
-	SendNUIMessage({action = "setValue", key = "job", value = job.label .. " - " .. job.grade_label})
+	SendNUIMessage({action = "setValue", key = "job", value = job.label .. " - " .. job.grade_label, icon = job.name})
 end)
 
 --Voice
@@ -45,7 +45,7 @@ end)
 
 RegisterNetEvent("esx:setJob")
 AddEventHandler("esx:setJob", function(job)
-  SendNUIMessage({action = "setValue", key = "job", value = job.label .. " - " .. job.grade_label})
+  SendNUIMessage({action = "setValue", key = "job", value = job.label .. " - " .. job.grade_label, icon = job.name})
 end)
 
 RegisterNetEvent("mine_customui:updateStatus")
