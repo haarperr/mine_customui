@@ -29,6 +29,7 @@ files {
 	"./html/js/script.js",
 	-- Img
 	"./html/img/hunger.png",
+	"./html/img/money-bag.png",
 	"./html/img/speaker1.png",
 	"./html/img/speaker2.png",
 	"./html/img/speaker3.png",

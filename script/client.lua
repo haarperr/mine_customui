@@ -19,8 +19,15 @@ end)
 --Starter state
 RegisterNetEvent("esx:playerLoaded")
 AddEventHandler("esx:playerLoaded", function(xPlayer)
-	--Money
-	SendNUIMessage({action = "setValue", key = "money", value = xPlayer.money .. " €"})
+	--Cash
+	SendNUIMessage({action = "setValue", key = "money", value = ESX.Math.GroupDigits(xPlayer.money) .. " €"})
+	
+	--Black money
+	for indice, valore in pairs(xPlayer.accounts) do
+		if valore.name == "black_money" then
+			SendNUIMessage({action = "setValue", key = "black", value = ESX.Math.GroupDigits(valore.money) .. " €"})
+		end
+	end
 	
 	--Job
 	local job = xPlayer.job
@@ -48,6 +55,13 @@ end)
 RegisterNetEvent("es:activateMoney")
 AddEventHandler("es:activateMoney", function(e)
 	SendNUIMessage({action = "setValue", key = "cash", value = ESX.Math.GroupDigits(e) .. " €"})
+end)
+
+RegisterNetEvent("esx:setAccountMoney")
+AddEventHandler("esx:setAccountMoney", function(account)
+	if account.name == "black_money" then
+		SendNUIMessage({action = "setValue", key = "black", value = ESX.Math.GroupDigits(account.money) .. " €"})
+	end
 end)
 
 RegisterNetEvent("esx:setJob")
