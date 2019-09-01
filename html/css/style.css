@@ -29,6 +29,10 @@ body {
 	margin-right: 5%
 }
 
+#black span {
+	color: rgb(255, 77, 77);
+}
+
 .list-group-item {
 	padding: 0.5rem 1rem;
 }
