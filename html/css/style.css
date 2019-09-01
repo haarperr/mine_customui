@@ -10,10 +10,17 @@ body {
 }
 
 #stats {
-	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6) , rgba(0, 0, 0, 0.1));
 	width: 15%;
 	margin-left: 16%;
 	margin-bottom: 5px;
+}
+
+#stats ul {
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6) , rgba(0, 0, 0, 0.1));
+	border-radius: 5%;
+}
+#stats ul li {
+	border: none;
 }
 
 #stats img {
