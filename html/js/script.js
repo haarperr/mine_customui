@@ -2,7 +2,7 @@ $(function(){
 	window.addEventListener("message", function(event) {
 		switch (event.data.action) {
 			case "show":
-				$("#stats").show()
+				showUI(event.data.show)
 			break;
 			case "setValue":
 				if (event.data.key == "job")
@@ -39,3 +39,10 @@ function setTalking(value) {
 function changeVolume(volume) {
 	$("#voice img").attr("src", "./img/speaker" + volume + ".png")
 }//changeVolume
+
+function showUI(show) {
+	if (show)
+		$("#stats").show()
+	else
+		$("#stats").hide()
+}//showUI

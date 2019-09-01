@@ -11,8 +11,8 @@ end)
 
 --Show GUI
 RegisterNetEvent("mine_custumui:show")
-AddEventHandler("mine_custumui:show", function()
-	SendNUIMessage({action = "show"})
+AddEventHandler("mine_custumui:show", function(show)
+	SendNUIMessage({action = "show", show = show})
 end)
 
 --Starter state
@@ -72,4 +72,20 @@ end)
 RegisterNetEvent("esx:setJob")
 AddEventHandler("esx:setJob", function(job)
 	SendNUIMessage({action = "setValue", key = "job", value = job.label .. " - " .. job.grade_label, icon = job.name})
+end)
+
+--Hide on menu
+local isPaused = false
+CreateThread(function()
+	while true do
+		Citizen.Wait(1000)
+		
+		if IsPauseMenuActive() and not isPaused then
+			isPaused = true
+			TriggerEvent("mine_custumui:show", false)
+		elseif not IsPauseMenuActive() and isPaused then
+			isPaused = false
+			TriggerEvent("mine_custumui:show", true)
+		end
+	end
 end)
